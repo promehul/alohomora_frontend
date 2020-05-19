@@ -35,9 +35,11 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,7 +58,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
-REST_USE_JWT = True
+
+REST_USE_JWT = False
 
 ROOT_URLCONF = 'alohomora_backend.urls'
 
@@ -92,8 +95,13 @@ DATABASES = {
 }
 
 
-CORS_ORIGIN_WHITELIST = (
-        'https://localhost:3000',
+# CORS_ORIGIN_WHITELIST = (
+#         'https://localhost:3000',
+# )
+
+CORS_ORIGIN_REGEX_WHITELIST = (
+    r'^(http?://)?localhost',
+    r'^(http?://)?127.',
 )
 
 # Password validation
@@ -134,6 +142,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Email backend settings for Django
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'khetanmehul@gmail.com'
@@ -153,7 +168,9 @@ AUTHENTICATION_BACKENDS = (
 
 OLD_PASSWORD_FIELD_ENABLED = True
 
+
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
