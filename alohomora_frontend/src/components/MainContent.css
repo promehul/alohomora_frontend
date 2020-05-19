@@ -1,0 +1,13 @@
+.MainDiv {
+  /*background-image: url("http://localhost:8000/media/cover_image.png");
+  background-repeat: repeat; */
+  background-color: #f9f9f9;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.MainComponents {
+  height: 90%;
+  margin: auto;
+}
