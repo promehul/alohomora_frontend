@@ -85,16 +85,16 @@ class Question extends Component {
           this.setState({
             answer: "",
           });
-          if(response.data === "Correct")
-               {
-                store.dispatch(
-                  notifSend({
-                    message: "Congratulations! You answer was Right !",
-                    kind: "info",
-                    dismissAfter: 5000,
-                  })
-                );
-                 history.push("/");}
+          if (response.data === "Correct") {
+            store.dispatch(
+              notifSend({
+                message: "Congratulations! You answer was Right !",
+                kind: "info",
+                dismissAfter: 5000,
+              })
+            );
+            history.push("/");
+          }
         })
         .catch((error) => {
           console.log("error");
