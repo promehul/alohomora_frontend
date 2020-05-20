@@ -1,6 +1,10 @@
 .question-center {
   height: 100%;
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui.icon.menu .item {
+  text-align: left !important;
 }
