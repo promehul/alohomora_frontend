@@ -31,6 +31,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
         """
 
         model = UserProfile
-        exclude = []
+        exclude = ['last_question_done']
         read_only_fields = ['question_on']
     
