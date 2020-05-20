@@ -79,7 +79,7 @@ class HomePage extends Component {
             visible
             width="wide"
             direction="right"
-            style={{ width: 270 }}
+            style={{ width: 260 }}
           >
             <Label size="medium" color="white">
               LeaderBoard
@@ -93,10 +93,11 @@ class HomePage extends Component {
               </Menu.Item>
             ))}
           </Sidebar>
-
-          <div className="question-center">
+              <Sidebar.Pusher className="question-center">
+          <div >
             <Question question_on={this.state.userInfo.question_on} />
           </div>
+          </Sidebar.Pusher>
         </React.Fragment>
       );
     } else {

@@ -1,10 +1,11 @@
 .question-center {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100% ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
 }
 
 .ui.icon.menu .item {
-  text-align: left !important;
+  text-align: left ;
+  word-wrap: break-word;
 }
