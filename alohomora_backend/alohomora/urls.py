@@ -7,9 +7,9 @@ from alohomora.views.question_view import QuestionViewSet
 
 router = routers.SimpleRouter()
 router.register(
-    'user_profile',
+    'profile',
     UserProfileViewSet,
-    base_name = 'user_profile',
+    base_name = 'profile',
 )
 
 router.register(

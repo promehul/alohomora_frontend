@@ -15,8 +15,8 @@ class UserSerializer(serializers.ModelSerializer):
         """
 
         model = User
-        fields = ['username','email']
-        read_only_fields = ['username', 'email']
+        fields = ['username','email', 'pk']
+        read_only_fields = ['username', 'email', 'pk']
 
 class UserProfileSerializer(serializers.ModelSerializer):
     """
@@ -32,4 +32,5 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
         model = UserProfile
         exclude = []
+        read_only_fields = ['question_on']
     

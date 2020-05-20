@@ -6,6 +6,6 @@ from alohomora.models import Question
 
 class QuestionViewSet(ModelViewSet):
     serializer_class = QuestionSerializer    
-    pagination_class = PageNumberPagination
-    page_size = 12
+    pagination_class = None
     queryset = Question.objects.all()
+    allowed_methods = ['GET']
