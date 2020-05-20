@@ -14,6 +14,9 @@ import {
 import { AlohomoraUrls } from "../../constants/urls";
 import store from "../../store";
 import { getUserToken } from "../../utils/authUtils";
+import history from "../../utils/historyUtils";
+
+import { actions as notifActions } from "redux-notifications";
 
 import "./Question.css";
 
@@ -66,6 +69,8 @@ class Question extends Component {
     const token = getUserToken(store.getState());
     const headers = { authorization: "Token " + token };
 
+    const { notifSend } = notifActions;
+
     var formData = new FormData();
     formData.append("answer", this.state.answer);
 
@@ -77,10 +82,19 @@ class Question extends Component {
         headers: headers,
       })
         .then((response) => {
-          console.log(response.data);
           this.setState({
             answer: "",
           });
+          if(response.data === "Correct")
+               {
+                store.dispatch(
+                  notifSend({
+                    message: "Congratulations! You answer was Right !",
+                    kind: "info",
+                    dismissAfter: 5000,
+                  })
+                );
+                 history.push("/");}
         })
         .catch((error) => {
           console.log("error");
