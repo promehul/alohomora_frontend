@@ -8,4 +8,4 @@ from alohomora.models import UserProfile
 class UserProfileViewSet(ModelViewSet):
     serializer_class = UserProfileSerializer    
     pagination_class = PageNumberPagination
-    queryset = UserProfile.objects.all().order_by('-question_on')
+    queryset = UserProfile.objects.all().order_by('-question_on', 'last_question_done')

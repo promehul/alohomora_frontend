@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions, status
@@ -28,6 +30,7 @@ class CheckAnswer(APIView):
             return HttpResponseBadRequest("Invalid Question") 
         elif (answer == correct_answer):
             userprofile_object.question_on = (question_on+1)
+            userprofile_object.last_question_done = datetime.now()
             userprofile_object.save()
             return HttpResponse("Correct", status=200)       
         elif (answer != correct_answer):

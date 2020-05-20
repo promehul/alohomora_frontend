@@ -30,6 +30,7 @@ class UserProfile(models.Model):
     last_name = models.CharField(max_length=30, blank=True)
 
     question_on = models.IntegerField(default=1)
+    last_question_done = models.DateTimeField(auto_now_add=True)
 
 
     def __str__(self):
