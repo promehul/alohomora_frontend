@@ -67,7 +67,7 @@ REST_USE_JWT = False
 
 ROOT_URLCONF = 'alohomora_backend.urls'
 
-TEMPLATES_ROOT = os.path.join(BASE_DIR, "templates")
+TEMPLATES_ROOT = os.path.join(BASE_DIR, "build")
 
 TEMPLATES = [
     {
@@ -147,7 +147,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "build/static"),
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
