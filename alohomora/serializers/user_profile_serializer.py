@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.contrib.auth.models import User
 
 from rest_framework import serializers
@@ -15,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
         """
 
         model = User
-        fields = ['username','email', 'pk']
+        fields = ['username', 'email', 'pk']
         read_only_fields = ['username', 'email', 'pk']
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -31,6 +30,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
         """
 
         model = UserProfile
-        exclude = ['last_question_done']
+        exclude = ['last_question_done', 'profile_image']
         read_only_fields = ['question_on']
     

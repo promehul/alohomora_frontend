@@ -3,5 +3,9 @@
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
 
-  "python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "--errors-only",
+    "pylint_django"
+  ]
 }
