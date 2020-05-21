@@ -2,17 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import "./HomePage.css";
 
-import {
-  Sidebar,
-  Menu,
-  Segment,
-  Icon,
-  Label,
-  Button,
-  Header,
-  Image,
-  Loader,
-} from "semantic-ui-react";
+import { Sidebar, Menu, Label, Loader } from "semantic-ui-react";
 
 import { AlohomoraUrls } from "../../constants/urls";
 import store from "../../store";
@@ -93,10 +83,10 @@ class HomePage extends Component {
               </Menu.Item>
             ))}
           </Sidebar>
-              <Sidebar.Pusher className="question-center">
-          <div >
-            <Question question_on={this.state.userInfo.question_on} />
-          </div>
+          <Sidebar.Pusher className="question-center">
+            <div>
+              <Question question_on={this.state.userInfo.question_on} />
+            </div>
           </Sidebar.Pusher>
         </React.Fragment>
       );
