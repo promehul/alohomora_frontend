@@ -81,11 +81,19 @@ class Question extends Component {
             store.dispatch(
               notifSend({
                 message: "Congratulations! You answer was Right !",
-                kind: "info",
-                dismissAfter: 5000,
+                kind: "success",
+                dismissAfter: 4000,
               })
             );
             history.push("/");
+          } else {
+            store.dispatch(
+              notifSend({
+                message: "Answer was incorrect",
+                kind: "warning",
+                dismissAfter: 2000,
+              })
+            );
           }
         })
         .catch((error) => {
