@@ -1,15 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 
-import {
-  Image,
-  Container,
-  Label,
-  Input,
-  Button,
-  Divider,
-  Segment,
-} from "semantic-ui-react";
+import { Image, Container, Input, Button, Segment } from "semantic-ui-react";
 
 import { AlohomoraUrls } from "../../constants/urls";
 import store from "../../store";

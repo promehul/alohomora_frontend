@@ -14,16 +14,11 @@ import PasswordResetConfirm from "./auth/PasswordResetConfirm";
 import NoMatch from "./NoMatch";
 import HomePage from "./HomePage/HomePage";
 
-
 import "./MainContent.css";
 // import Profo from "./profo";
 
-
-
-
 const MainContent = () => (
   <div className="MainDiv">
-
     <div className="MainComponents">
       <Switch>
         <Route exact path="/" component={RequireAuth(HomePage)} />
@@ -47,7 +42,6 @@ const MainContent = () => (
         />
 
         <Route component={NoMatch} />
-
       </Switch>
     </div>
   </div>
