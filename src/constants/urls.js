@@ -1,4 +1,4 @@
-export const ROOT_URL = "http://promehul.pythonanywhere.com";
+export const ROOT_URL = "https://alohomora-fk.herokuapp.com";
 
 export const AuthUrls = {
   LOGIN: `${ROOT_URL}/api/auth/login/`,
