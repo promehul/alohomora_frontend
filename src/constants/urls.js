@@ -1,4 +1,4 @@
-export const ROOT_URL = "https://alohomora-fk.herokuapp.com";
+export const ROOT_URL = "http://localhost:8000";
 
 export const AuthUrls = {
   LOGIN: `${ROOT_URL}/api/auth/login/`,
@@ -10,10 +10,9 @@ export const AuthUrls = {
   USER_PROFILE: `${ROOT_URL}/rest-auth/user/`,
 };
 
-
 export const AlohomoraUrls = {
   PROFILE: `${ROOT_URL}/alohomora/profile/`,
   QUESTION: `${ROOT_URL}/alohomora/question/`,
   CHECK_ANSWER: `${ROOT_URL}/alohomora/check_answer`,
   SELF_USER: `${ROOT_URL}/alohomora/self_user`,
-}
+};
