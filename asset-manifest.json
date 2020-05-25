@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/alohomora_frontend/static/css/main.94837fda.chunk.css",
+    "main.js": "/alohomora_frontend/static/js/main.bceb33c1.chunk.js",
+    "main.js.map": "/alohomora_frontend/static/js/main.bceb33c1.chunk.js.map",
+    "runtime-main.js": "/alohomora_frontend/static/js/runtime-main.62d9cf17.js",
+    "runtime-main.js.map": "/alohomora_frontend/static/js/runtime-main.62d9cf17.js.map",
+    "static/css/2.445919a4.chunk.css": "/alohomora_frontend/static/css/2.445919a4.chunk.css",
+    "static/js/2.c4c5dbe5.chunk.js": "/alohomora_frontend/static/js/2.c4c5dbe5.chunk.js",
+    "static/js/2.c4c5dbe5.chunk.js.map": "/alohomora_frontend/static/js/2.c4c5dbe5.chunk.js.map",
+    "index.html": "/alohomora_frontend/index.html",
+    "precache-manifest.044585dec29d7085c488dc01049a803f.js": "/alohomora_frontend/precache-manifest.044585dec29d7085c488dc01049a803f.js",
+    "service-worker.js": "/alohomora_frontend/service-worker.js",
+    "static/css/2.445919a4.chunk.css.map": "/alohomora_frontend/static/css/2.445919a4.chunk.css.map",
+    "static/css/main.94837fda.chunk.css.map": "/alohomora_frontend/static/css/main.94837fda.chunk.css.map",
+    "static/js/2.c4c5dbe5.chunk.js.LICENSE.txt": "/alohomora_frontend/static/js/2.c4c5dbe5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62d9cf17.js",
+    "static/css/2.445919a4.chunk.css",
+    "static/js/2.c4c5dbe5.chunk.js",
+    "static/css/main.94837fda.chunk.css",
+    "static/js/main.bceb33c1.chunk.js"
+  ]
+}
