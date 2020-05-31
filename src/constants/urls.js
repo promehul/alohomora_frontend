@@ -1,4 +1,4 @@
-export const ROOT_URL = "http://localhost:8000";
+export const ROOT_URL = "https://promehul.pythonanywhere.com";
 
 export const AuthUrls = {
   LOGIN: `${ROOT_URL}/api/auth/login/`,
