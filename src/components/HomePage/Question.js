@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 
-import { Image, Container, Input, Button, Segment } from "semantic-ui-react";
+import { Image, Container, Input, Button, Segment, Loader } from "semantic-ui-react";
 
 import { AlohomoraUrls } from "../../constants/urls";
 import store from "../../store";
@@ -18,6 +18,7 @@ class Question extends Component {
     this.state = {
       questionInfo: {},
       answer: "",
+      loaded: false,
     };
   }
 
@@ -41,6 +42,7 @@ class Question extends Component {
           axios.spread((questionRes) => {
             this.setState({
               questionInfo: questionRes.data,
+              loaded: true,
             });
           })
         )
@@ -80,7 +82,7 @@ class Question extends Component {
           if (response.data === "Correct") {
             store.dispatch(
               notifSend({
-                message: "Congratulations! You answer was Right !",
+                message: "Congratulations! Your answer was Right !",
                 kind: "success",
                 dismissAfter: 4000,
               })
@@ -89,7 +91,7 @@ class Question extends Component {
           } else {
             store.dispatch(
               notifSend({
-                message: "Answer was incorrect",
+                message: "The Answer was incorrect",
                 kind: "warning",
                 dismissAfter: 2000,
               })
@@ -109,6 +111,7 @@ class Question extends Component {
   };
 
   render() {
+    if(this.state.loaded){
     return (
       <Container textAlign="center" text>
         {this.state.questionInfo.image !== null && (
@@ -136,7 +139,12 @@ class Question extends Component {
           Check Answer
         </Button>
       </Container>
-    );
+    );}
+    else {
+     return (
+    <Loader active size="medium">Question Coming...</Loader>
+     );
+    }
   }
 }
 
