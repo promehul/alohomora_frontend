@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Menu, Modal } from "semantic-ui-react";
 import history from "../../utils/historyUtils";
 
+import "./Header.css";
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -44,12 +46,17 @@ class Header extends Component {
           open={this.state.modalOpen}
           size="mini"
           onClose={this.closeModal}
-          closeIcon={true}
+          closeIcon={{
+            style: { top: "1.0535rem", right: "1rem" },
+            color: "black",
+            name: "close",
+          }}
+          className="modal"
         >
           <Modal.Header>Instructions</Modal.Header>
           <Modal.Content>
             <Modal.Description>
-              <p>Welcome to Alohomora.</p>
+              <h5>Welcome to Alohomora.</h5>
               <hr />
               <p>
                 All answers should be in small caps. If the answer comprises of
