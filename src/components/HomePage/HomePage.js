@@ -9,6 +9,7 @@ import store from "../../store";
 import { getUserToken } from "../../utils/authUtils";
 
 import Question from "./Question";
+import Header from "./Header";
 
 class HomePage extends Component {
   constructor(props) {
@@ -60,6 +61,7 @@ class HomePage extends Component {
     if (this.state.loaded) {
       return (
         <React.Fragment>
+          <Header />
           <Sidebar
             as={Menu}
             animation="overlay"
