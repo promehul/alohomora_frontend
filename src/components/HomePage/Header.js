@@ -72,8 +72,8 @@ class Header extends Component {
                 written in alphabtetical form.
               </p>
               <p>
-                Suppose the answer is <b>Super Saiyan 3</b>, then it would be
-                written like <b>supersaiyanthree</b>.
+                Suppose the answer is <b>Area 51</b>, then it would be written
+                like <b>areafiveone</b>.
               </p>
               <hr />
               <p>
