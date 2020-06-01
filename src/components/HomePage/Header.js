@@ -38,15 +38,14 @@ class Header extends Component {
     return (
       <React.Fragment>
         <Menu>
-          <Menu.Item name="logout" onClick={this.handleItemClick}>
-            Log Out
+          <Menu.Item name="leaderboard" onClick={this.handleItemClick}>
+            {this.props.leaderboardVisible ? "Hide" : "Show"} Leaderboard
           </Menu.Item>
-
           <Menu.Item name="instructions" onClick={this.handleItemClick}>
             Instructions
           </Menu.Item>
-          <Menu.Item name="leaderboard" onClick={this.handleItemClick}>
-            {this.props.leaderboardVisible ? "Hide" : "Show"} Leaderboard
+          <Menu.Item name="logout" onClick={this.handleItemClick}>
+            Log Out
           </Menu.Item>
         </Menu>
         <Modal
