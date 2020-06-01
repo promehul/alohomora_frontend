@@ -13,17 +13,17 @@ class Header extends Component {
   }
 
   handleItemClick = (e, { name }) => {
-    if (name == "logout") {
+    if (name === "logout") {
       history.push("/logout");
     }
 
-    if (name == "instructions") {
+    if (name === "instructions") {
       this.setState({
         modalOpen: true,
       });
     }
 
-    if (name == "leaderboard") {
+    if (name === "leaderboard") {
       this.props.toggleLeaderboard();
     }
   };
@@ -76,7 +76,11 @@ class Header extends Component {
               </p>
               <hr />
               <p>
-                Created with &#128147; by <b>promehul</b> & <b>hrishikeshaj</b>
+                Created with{" "}
+                <span role="img" aria-label="heart">
+                  &#128147;
+                </span>{" "}
+                by <b>promehul</b> & <b>hrishikeshaj</b>
               </p>
             </Modal.Description>
           </Modal.Content>
