@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Modal, Image, Button } from "semantic-ui-react";
+import { Menu, Modal } from "semantic-ui-react";
 import history from "../../utils/historyUtils";
 
 class Header extends Component {
@@ -50,6 +50,21 @@ class Header extends Component {
           <Modal.Content>
             <Modal.Description>
               <p>Welcome to Alohomora.</p>
+              <hr />
+              <p>
+                All answers should be in small caps. If the answer comprises of
+                2 words and there is space between them, that space should be
+                omitted. If the answer contains numbers then they should be
+                written in alphabtetical form.
+              </p>
+              <p>
+                Suppose the answer is <b>Super Saiyan 3</b>, then it would be
+                written like <b>supersaiyanthree</b>.
+              </p>
+              <hr />
+              <p>
+                Created with &#128147; by <b>promehul</b> & <b>hrishikeshaj</b>
+              </p>
             </Modal.Description>
           </Modal.Content>
         </Modal>
