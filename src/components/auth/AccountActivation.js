@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { reduxForm, propTypes } from "redux-form";
 import { activateUserAccount } from "../../actions/authActions";
 import { renderError } from "../../utils/renderUtils";
+import {Button} from "semantic-ui-react";
 
 class AccountActivation extends Component {
 
@@ -23,7 +24,7 @@ class AccountActivation extends Component {
 
                     <fieldset className="form-group">
                         {renderError(error)}
-                        <button action="submit" className="btn btn-primary">Activate</button>
+                        <Button action="submit" fluid primary>Activate</Button>
                     </fieldset>
                 </form>
             </div>
