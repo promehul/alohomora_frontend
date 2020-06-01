@@ -17,6 +17,7 @@ class HomePage extends Component {
     this.state = {
       userInfo: {},
       profileInfo: [],
+      leaderboardVisible: false,
       loaded: false,
     };
   }
@@ -57,18 +58,27 @@ class HomePage extends Component {
     }
   }
 
+  toggleLeaderboard = () => {
+    this.setState((prevstate) => ({
+      leaderboardVisible: !prevstate.leaderboardVisible,
+    }));
+  };
+
   render() {
     if (this.state.loaded) {
       return (
         <React.Fragment>
-          <Header />
+          <Header
+            toggleLeaderboard={this.toggleLeaderboard}
+            leaderboardVisible={this.state.leaderboardVisible}
+          />
           <Sidebar
             as={Menu}
             animation="overlay"
             icon="labeled"
             inverted
             vertical
-            visible
+            visible={this.state.leaderboardVisible}
             width="wide"
             direction="right"
             style={{ width: 260 }}

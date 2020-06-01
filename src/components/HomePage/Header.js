@@ -22,6 +22,10 @@ class Header extends Component {
         modalOpen: true,
       });
     }
+
+    if (name == "leaderboard") {
+      this.props.toggleLeaderboard();
+    }
   };
 
   closeModal = () => {
@@ -40,6 +44,9 @@ class Header extends Component {
 
           <Menu.Item name="instructions" onClick={this.handleItemClick}>
             Instructions
+          </Menu.Item>
+          <Menu.Item name="leaderboard" onClick={this.handleItemClick}>
+            {this.props.leaderboardVisible ? "Hide" : "Show"} Leaderboard
           </Menu.Item>
         </Menu>
         <Modal
