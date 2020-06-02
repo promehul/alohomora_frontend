@@ -72,6 +72,7 @@ class HomePage extends Component {
             toggleLeaderboard={this.toggleLeaderboard}
             leaderboardVisible={this.state.leaderboardVisible}
           />
+
           <Sidebar
             as={Menu}
             animation="overlay"
@@ -81,6 +82,7 @@ class HomePage extends Component {
             visible={this.state.leaderboardVisible}
             width="wide"
             direction="right"
+            onHide={this.toggleLeaderboard}
             style={{ width: 260 }}
           >
             <Label size="medium" color="white">

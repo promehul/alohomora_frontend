@@ -39,7 +39,7 @@ class Header extends Component {
       <React.Fragment>
         <Menu>
           <Menu.Item name="leaderboard" onClick={this.handleItemClick}>
-            {this.props.leaderboardVisible ? "Hide" : "Show"} Leaderboard
+            Show Leaderboard
           </Menu.Item>
           <Menu.Item name="instructions" onClick={this.handleItemClick}>
             Instructions
