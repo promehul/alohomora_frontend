@@ -1,7 +1,14 @@
 import axios from "axios";
 import React, { Component } from "react";
 
-import { Image, Container, Input, Button, Segment, Loader } from "semantic-ui-react";
+import {
+  Image,
+  Container,
+  Input,
+  Button,
+  Segment,
+  Loader,
+} from "semantic-ui-react";
 
 import { AlohomoraUrls } from "../../constants/urls";
 import store from "../../store";
@@ -68,6 +75,10 @@ class Question extends Component {
     var formData = new FormData();
     formData.append("answer", this.state.answer);
 
+    this.setState({
+      answer: "",
+    });
+
     if (token) {
       axios({
         method: "post",
@@ -76,9 +87,6 @@ class Question extends Component {
         headers: headers,
       })
         .then((response) => {
-          this.setState({
-            answer: "",
-          });
           if (response.data === "Correct") {
             store.dispatch(
               notifSend({
@@ -111,39 +119,41 @@ class Question extends Component {
   };
 
   render() {
-    if(this.state.loaded){
-    return (
-      <Container textAlign="center" text>
-        {this.state.questionInfo.image !== null && (
-          <Image
-            centered
-            src={this.state.questionInfo.image}
-            size="medium"
-          ></Image>
-        )}
-        {this.state.questionInfo.question_text !== "" && (
-          <Segment size="large" textAlign="center">
-            {this.state.questionInfo.question_text}
-          </Segment>
-        )}
-        <Input
-          focus
-          placeholder="Answer here.."
-          size="small"
-          className="answer-input"
-          onChange={this.answerChangeHandle}
-          onKeyPress={this.handleKeyPress}
-          value={this.state.answer}
-        />
-        <Button positive onClick={this.checkAnswer}>
-          Check Answer
-        </Button>
-      </Container>
-    );}
-    else {
-     return (
-    <Loader active size="medium">Question Coming...</Loader>
-     );
+    if (this.state.loaded) {
+      return (
+        <Container textAlign="center" text>
+          {this.state.questionInfo.image !== null && (
+            <Image
+              centered
+              src={this.state.questionInfo.image}
+              size="medium"
+            ></Image>
+          )}
+          {this.state.questionInfo.question_text !== "" && (
+            <Segment size="large" textAlign="center">
+              {this.state.questionInfo.question_text}
+            </Segment>
+          )}
+          <Input
+            focus
+            placeholder="Answer here.."
+            size="small"
+            className="answer-input"
+            onChange={this.answerChangeHandle}
+            onKeyPress={this.handleKeyPress}
+            value={this.state.answer}
+          />
+          <Button positive onClick={this.checkAnswer}>
+            Check Answer
+          </Button>
+        </Container>
+      );
+    } else {
+      return (
+        <Loader active size="medium">
+          Question Coming...
+        </Loader>
+      );
     }
   }
 }
