@@ -68,11 +68,12 @@ class Header extends Component {
                 All answers should be in small caps. If the answer comprises of
                 2 words and there is space between them, that space should be
                 omitted. If the answer contains numbers then they should be
-                written in alphabtetical form.
+                written in alphabtetical form. No special characters should be
+                there in the answer.
               </p>
               <p>
-                Suppose the answer is <b>Area 51</b>, then it would be written
-                like <b>areafiveone</b>.
+                Suppose the correct answer is <b>Area-51</b>, then it would be
+                written like <b>areafiveone</b>.
               </p>
               <hr />
               <p>

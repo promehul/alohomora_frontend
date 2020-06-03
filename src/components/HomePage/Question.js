@@ -123,11 +123,7 @@ class Question extends Component {
       return (
         <Container textAlign="center" text>
           {this.state.questionInfo.image !== null && (
-            <Image
-              centered
-              src={this.state.questionInfo.image}
-              size="medium"
-            ></Image>
+            <Image centered src={this.state.questionInfo.image} size="medium" />
           )}
           {this.state.questionInfo.question_text !== "" && (
             <Segment size="large" textAlign="center">
