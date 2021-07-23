@@ -81,7 +81,7 @@ class Header extends Component {
                 <span role="img" aria-label="heart">
                   &#128147;
                 </span>{" "}
-                by <b>promehul</b> & <b>hrishikeshaj</b>
+                by <b>promehul</b>
               </p>
             </Modal.Description>
           </Modal.Content>
