@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.css";
 import "redux-notifications/lib/styles.css";
 import React from "react";
 import ReactDOM from "react-dom";
