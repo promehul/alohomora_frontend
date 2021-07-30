@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
+import "./Signup.css"
 import { reduxForm, Field, propTypes } from "redux-form";
 import { required } from "redux-form-validators";
 import { renderField } from "../../utils/renderUtils";
@@ -14,7 +15,7 @@ class Signup extends Component {
   render() {
     const { handleSubmit, error } = this.props;
     console.log(error)
-    return (
+      return (
       <div className="row justify-content-center mx-auto">
         <form className="col col-sm-4 card mt-5 p-2" onSubmit={handleSubmit}>
           <h4 className="text-md-center">Sign Up</h4>

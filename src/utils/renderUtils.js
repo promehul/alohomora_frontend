@@ -1,4 +1,5 @@
 import React from "react";
+import {Label, Input} from "semantic-ui-react";
 
 export const renderField = ({
   input,
@@ -7,14 +8,9 @@ export const renderField = ({
   meta: { touched, error },
 }) => (
   <div>
-    <label>{label}</label>
-    <div>
-      <input className="form-control" {...input} type={type} />
-    </div>
+    <Input className="form-control" {...input} type={type} placeholder={label}></Input>    
     {touched && error && (
-      <div className="alert alert-danger p-1">
-        <small>{error}</small>
-      </div>
+      <Label pointing color="red" basic>{error}</Label>
     )}
   </div>
 );
@@ -31,15 +27,13 @@ export const renderTextAreaField = ({
       <textarea className="form-control" {...input} type={type} />
     </div>
     {touched && error && (
-      <div className="alert alert-danger p-1">
-        <small>{error}</small>
-      </div>
+      <Label pointing color="red" basic>{error}</Label>
     )}
   </div>
 );
 
 export const renderError = (errorMessages) => {
   if (errorMessages) {
-    return <div className="alert alert-danger">{errorMessages}</div>;
+    return <Label pointing color="red" basic>{errorMessages}</Label>;
   }
 };

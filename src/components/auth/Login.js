@@ -19,7 +19,7 @@ class Login extends Component {
       <div className="row justify-content-center mx-auto">
         <form className="col col-sm-4 card mt-5 p-2" onSubmit={handleSubmit}>
           <h4 className="text-md-center">Please Log In</h4>
-          <hr />
+          
 
           <fieldset className="form-group">
             <Field
