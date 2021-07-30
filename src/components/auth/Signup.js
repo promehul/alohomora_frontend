@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import PropTypes from "prop-types";
 import { reduxForm, Field, propTypes } from "redux-form";
 import { required } from "redux-form-validators";
-import { renderField, renderError } from "../../utils/renderUtils";
+import { renderField } from "../../utils/renderUtils";
 import { signupUser } from "../../actions/authActions";
 import { Button } from "semantic-ui-react";
 
@@ -13,7 +13,7 @@ class Signup extends Component {
 
   render() {
     const { handleSubmit, error } = this.props;
-
+    console.log(error)
     return (
       <div className="row justify-content-center mx-auto">
         <form className="col col-sm-4 card mt-5 p-2" onSubmit={handleSubmit}>
